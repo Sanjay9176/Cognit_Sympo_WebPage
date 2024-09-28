@@ -16,6 +16,7 @@ export default {
         "cse-cyan": "#3DF6FF",
       },
     },
+
     container: {
       center: true,
     },

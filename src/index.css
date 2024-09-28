@@ -1,10 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* h2 {
-  -webkit-text-stroke: 1px #ff2eff;
-  color: transparent;
-  text-shadow: 3px 3px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
-    -1px 1px 0 #d71414, 1px 1px 0 #ec1515;
-} */
+:root {
+  --cse-violet: #ff2eff;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-shadow: 2px 2px 0 var(--cse-violet), -2px 2px 0 var(--cse-violet),
+    2px -2px 0 var(--cse-violet), -2px -2px 0 var(--cse-violet);
+}
+
+/* Hide spinner for Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinner for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
