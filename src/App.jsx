@@ -48,7 +48,7 @@ const App = () => {
       <div className="bg-[url('/home-bg.jpeg')] bg-cover object-cover min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10">
         <div className="">
           <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide">
-            SYNERGY’24
+            SPARZO’24
           </h1>
           <h2
             className="text-white text-lg md:text-3xl lg:text-4xl mb-7 md:mb-12"
@@ -157,14 +157,24 @@ const App = () => {
 
           <div className="mt-16 flex-col flex md:flex-row items-center justify-center space-y-5 md:space-y-0 md:space-x-10">
             <div>
-              <button className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg">
+              <a
+                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
+              >
                 Register Now
-              </button>
+              </a>
             </div>
             <div>
-              <button className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg">
+              <a
+                href="https://linktr.ee/cse_gce"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
+              >
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </div>
