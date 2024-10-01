@@ -168,7 +168,7 @@ const App = () => {
             </div>
             <div>
               <a
-                href="https://linktr.ee/cse_gce"
+                href="https://linktr.ee/sparzo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
