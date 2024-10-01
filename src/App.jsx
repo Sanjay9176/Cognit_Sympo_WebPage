@@ -45,9 +45,10 @@ const App = () => {
 
   return (
     <div className="">
-      <div className="bg-[url('/home-bg.jpeg')] bg-cover object-cover min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10">
+      {/* Banner */}
+      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
         <div className="">
-          <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide">
+          <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide text-shadow-violet">
             SPARZO’24
           </h1>
           <h2
@@ -64,7 +65,6 @@ const App = () => {
 
           {/* TIME LEFT */}
           <div className="mt-5 md:mt-10 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
-            {/* Group for Days and Hours */}
             <div className="flex items-center flex-row justify-between space-x-5 md:space-x-0 flex-grow">
               <div className="text-center">
                 <label
@@ -109,7 +109,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* Group for Minutes and Seconds */}
             <div className="flex items-center flex-row justify-between space-x-5 md:space-x-0 flex-grow">
               <div className="text-center">
                 <label
@@ -155,13 +154,13 @@ const App = () => {
             </div>
           </div>
 
-          <div className="mt-16 flex-col flex md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-10">
+          <div className="mt-20 flex-col flex md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-10">
             <div>
               <a
                 href="https://forms.gle/2LhNuqZ98DwFEnDe7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
+                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
               >
                 Register Now
               </a>
@@ -178,7 +177,43 @@ const App = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* College Name */}
+      <section className="bg-[url('/bg-2.png')] bg-cse-main bg-cover object-cover bg-no-repeat lg:pt-20 -mt-12">
+        <div className="space-y-6 md:space-y-10 px-3 py-10 text-center">
+          <div className="space-y-3">
+            <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+              Department of
+            </h3>
+            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-stroke-1-cse-cyan">
+              Computer Science & Engineering
+            </h1>
+            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+              Government College of Engineering, Tiruneveli
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+              Proudly Presents
+            </h1>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wide text-shadow-cyan">
+              SPARZO’24
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Events */}
+      <section className="bg-cse-main py-10 text-center">
+        <h1 className="relative text-6xl font-semibold text-stroke-2-cse-cyan text-shadow-md">
+          <span className="relative z-10">HAPPENINGS</span>
+          <span className="absolute inset-0 -z-1 text-stroke-3-white">
+            HAPPENINGS
+          </span>
+        </h1>
+      </section>
     </div>
   );
 };

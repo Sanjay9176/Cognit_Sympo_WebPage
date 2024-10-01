@@ -1,4 +1,8 @@
+/* Jersey10 */
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +10,11 @@
 
 :root {
   --cse-violet: #ff2eff;
+  --cse-cyan: #3df6ff;
+}
+
+body {
+  @apply font-Poppins;
 }
 
 .jersey-10-regular {
@@ -13,8 +22,21 @@
   font-weight: 400;
   font-style: normal;
   color: white;
+}
+
+.text-shadow-violet {
   text-shadow: 2px 2px 0 var(--cse-violet), -2px 2px 0 var(--cse-violet),
     2px -2px 0 var(--cse-violet), -2px -2px 0 var(--cse-violet);
+}
+
+.text-shadow1 {
+  text-shadow: 2px 2px 0 var(--cse-violet), -2px 2px 0 var(--cse-violet),
+    2px -2px 0 var(--cse-violet), -2px -2px 0 var(--cse-violet);
+}
+
+.text-shadow-cyan {
+  text-shadow: 2px 2px 0 var(--cse-cyan), -2px 2px 0 var(--cse-cyan),
+    2px -2px 0 var(--cse-cyan), -2px -2px 0 var(--cse-cyan);
 }
 
 /* Hide spinner for Chrome, Safari, Edge, and Opera */
