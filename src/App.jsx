@@ -155,7 +155,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="mt-16 flex-col flex md:flex-row items-center justify-center space-y-5 md:space-y-0 md:space-x-10">
+          <div className="mt-16 flex-col flex md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-10">
             <div>
               <a
                 href="https://forms.gle/2LhNuqZ98DwFEnDe7"
