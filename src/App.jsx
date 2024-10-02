@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./fonts/stylesheet.css";
 import { useEffect } from "react";
 import { useMemo } from "react";
+import Events from "./components/Events";
 
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -46,9 +47,9 @@ const App = () => {
   return (
     <div className="">
       {/* Banner */}
-      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
+      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-cen min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
         <div className="">
-          <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide text-shadow-violet">
+          <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
             SPARZO’24
           </h1>
           <h2
@@ -59,7 +60,7 @@ const App = () => {
           >
             LET’S VIBE WITH US
           </h2>
-          <h3 className="text-white text-lg md:text-4xl lg:text-5xl font-bold tracking-wider">
+          <h3 className="text-white text-lg md:text-4xl lg:text-5xl font-bold tracking-wider text-shadow ">
             THE GREAT EVENTS STARTS FROM
           </h3>
 
@@ -69,7 +70,7 @@ const App = () => {
               <div className="text-center">
                 <label
                   htmlFor="days"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl"
+                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow "
                 >
                   DAYS
                 </label>
@@ -90,7 +91,7 @@ const App = () => {
               <div className="text-center md:ml-5">
                 <label
                   htmlFor="hrs"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl"
+                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
                 >
                   HRS
                 </label>
@@ -113,7 +114,7 @@ const App = () => {
               <div className="text-center">
                 <label
                   htmlFor="mins"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl"
+                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
                 >
                   MINS
                 </label>
@@ -134,7 +135,7 @@ const App = () => {
               <div className="text-center md:ml-5">
                 <label
                   htmlFor="secs"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl"
+                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
                 >
                   SECS
                 </label>
@@ -160,7 +161,7 @@ const App = () => {
                 href="https://forms.gle/2LhNuqZ98DwFEnDe7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
+                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
               >
                 Register Now
               </a>
@@ -170,7 +171,7 @@ const App = () => {
                 href="https://linktr.ee/sparzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-cyan transition-all hover:transition-all rounded-lg"
+                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet hover:shadow-glow transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
               >
                 Contact Us
               </a>
@@ -180,25 +181,25 @@ const App = () => {
       </section>
 
       {/* College Name */}
-      <section className="bg-[url('/bg-2.png')] bg-cse-main bg-cover object-cover bg-no-repeat lg:pt-20 -mt-12">
-        <div className="space-y-6 md:space-y-10 px-3 py-10 text-center">
-          <div className="space-y-3">
-            <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+      <section className="bg-[url('/ellipse.png')] bg-cse-main bg-cover bg-no-repeat bg-center">
+        <div className="space-y-6 md:space-y-12 px-1 text-center py-16 md:py-20 lg:py-20">
+          <div className="space-y-3 md:space-y-5">
+            <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Department of
             </h3>
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-stroke-1-cse-cyan">
+            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Computer Science & Engineering
             </h1>
-            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Government College of Engineering, Tiruneveli
             </h2>
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan">
+            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Proudly Presents
             </h1>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wide text-shadow-cyan">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wider text-shadow-violet">
               SPARZO’24
             </h1>
           </div>
@@ -206,13 +207,135 @@ const App = () => {
       </section>
 
       {/* Events */}
-      <section className="bg-cse-main py-10 text-center">
-        <h1 className="relative text-6xl font-semibold text-stroke-2-cse-cyan text-shadow-md">
-          <span className="relative z-10">HAPPENINGS</span>
-          <span className="absolute inset-0 -z-1 text-stroke-3-white">
-            HAPPENINGS
-          </span>
+      <section className="bg-cse-main py-5 md:pt-10 md:pb-20 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-RubikDoodle font-semibold text-white tracking-widest text-shadow-violet">
+          HAPPENINGS
         </h1>
+
+        <div className="mt-10 flex-col flex items-center justify-center space-y-8 md:space-y-9">
+          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
+            Technical Events
+          </button>
+          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
+            Non-Technical Events
+          </button>
+          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
+            Online Events
+          </button>
+        </div>
+      </section>
+
+      {/* Event details */}
+      <section className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center m-0 p-0 overflow-hidden min-h-screen">
+        <div className="bg-cse-main bg-opacity-50 w-full py-10">
+          <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center">
+            EVENTS
+          </h1>
+
+          <div className="container px-10 md:px-24 lg:px-32 mt-10">
+            <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
+              TECHNICAL EVENTS
+            </h1>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+            </div>
+
+            <button className="mt-10 flex mx-auto">
+              <a
+                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
+              >
+                Register Now
+              </a>
+            </button>
+          </div>
+
+          <div className="container px-10 md:px-24 lg:px-32 mt-14">
+            <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
+              NON-TECHNICAL EVENTS
+            </h1>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+            </div>
+
+            <button className="mt-10 flex mx-auto">
+              <a
+                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
+              >
+                Register Now
+              </a>
+            </button>
+          </div>
+
+          <div className="container px-10 md:px-24 lg:px-32 mt-14">
+            <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
+              ONLINE EVENTS
+            </h1>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+
+              <Events
+                name={"Code Debugging"}
+                img={"/technical-event.png"}
+                details={"Code debugging "}
+              />
+            </div>
+
+            <button className="mt-10 flex mx-auto">
+              <a
+                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
+              >
+                Register Now
+              </a>
+            </button>
+          </div>
+        </div>
       </section>
     </div>
   );
