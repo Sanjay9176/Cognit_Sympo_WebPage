@@ -59,7 +59,7 @@ const App = () => {
             LET’S VIBE WITH US
           </h2>
           <h3 className="text-white text-lg md:text-4xl lg:text-5xl font-bold tracking-wider">
-            THE GREAT EVENTS STARTS FROM
+            THE GREAT EVENTS STARTS IN
           </h3>
 
           {/* TIME LEFT */}
