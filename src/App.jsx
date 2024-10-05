@@ -12,7 +12,7 @@ const App = () => {
     seconds: 0,
   });
 
-  const targetDate = useMemo(() => new Date("2024-10-16T00:00:00"), []);
+  const targetDate = useMemo(() => new Date("2024-10-16T10:00:00"), []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,7 +47,7 @@ const App = () => {
   return (
     <div className="">
       {/* Banner */}
-      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-cen min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
+      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
         <div className="">
           <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
             SPARZO’24
@@ -60,110 +60,107 @@ const App = () => {
           >
             LET’S VIBE WITH US
           </h2>
-          <h3 className="text-white text-lg md:text-4xl lg:text-5xl font-bold tracking-wider text-shadow ">
-            THE GREAT EVENTS STARTS FROM
+          <h3 className="text-white text-lg md:text-4xl font-bold tracking-widest text-shadow ">
+            THE GREAT EVENTS STARTS IN
           </h3>
 
           {/* TIME LEFT */}
-          <div className="mt-5 md:mt-10 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
-            <div className="flex items-center flex-row justify-between space-x-5 md:space-x-0 flex-grow">
-              <div className="text-center">
-                <label
-                  htmlFor="days"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow "
-                >
-                  DAYS
-                </label>
-                <div className="flex flex-row justify-center items-center space-x-1.5 md:space-x-3 mt-3">
-                  {dayDigits.map((digit, index) => (
-                    <input
-                      key={`day-${index}`}
-                      type="number"
-                      disabled
-                      className="outline-none w-10 h-14 md:w-14 md:h-20 lg:w-20 lg:h-28 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-2xl md:text-5xl lg:text-6xl"
-                      value={digit}
-                      style={{ MozAppearance: "textfield" }}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="text-center md:ml-5">
-                <label
-                  htmlFor="hrs"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
-                >
-                  HRS
-                </label>
-                <div className="flex flex-row justify-center items-center space-x-1.5 md:space-x-3 mt-3">
-                  {hourDigits.map((digit, index) => (
-                    <input
-                      key={`hour-${index}`}
-                      type="number"
-                      disabled
-                      className="outline-none w-10 h-14 md:w-14 md:h-20 lg:w-20 lg:h-28 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-2xl md:text-5xl lg:text-6xl"
-                      value={digit}
-                      style={{ MozAppearance: "textfield" }}
-                    />
-                  ))}
-                </div>
+          <div className="mt-5 md:mt-10 flex items-center justify-center space-x-3 md:space-x-10">
+            <div className="text-center">
+              <label
+                htmlFor="days"
+                className="text-white font-semibold text-lg md:text-3xl lg:text-3xl text-shadow"
+              >
+                DAYS
+              </label>
+              <div className="flex justify-center items-center space-x-1 md:space-x-3 mt-1.5 md:mt-3">
+                {dayDigits.map((digit, index) => (
+                  <input
+                    key={`day-${index}`}
+                    type="number"
+                    disabled
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    value={digit}
+                    style={{ MozAppearance: "textfield" }}
+                  />
+                ))}
               </div>
             </div>
 
-            <div className="flex items-center flex-row justify-between space-x-5 md:space-x-0 flex-grow">
-              <div className="text-center">
-                <label
-                  htmlFor="mins"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
-                >
-                  MINS
-                </label>
-                <div className="flex flex-row justify-center items-center space-x-1.5 md:space-x-3 mt-3">
-                  {minuteDigits.map((digit, index) => (
-                    <input
-                      key={`minute-${index}`}
-                      type="number"
-                      disabled
-                      className="outline-none w-10 h-14 md:w-14 md:h-20 lg:w-20 lg:h-28 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-2xl md:text-5xl lg:text-6xl"
-                      value={digit}
-                      style={{ MozAppearance: "textfield" }}
-                    />
-                  ))}
-                </div>
+            <div className="text-center">
+              <label
+                htmlFor="hrs"
+                className="text-white font-semibold text-lg md:text-3xl lg:text-3xl text-shadow "
+              >
+                HRS
+              </label>
+              <div className="flex justify-center items-center space-x-1 md:space-x-3 mt-1.5 md:mt-3">
+                {hourDigits.map((digit, index) => (
+                  <input
+                    key={`hour-${index}`}
+                    type="number"
+                    disabled
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    value={digit}
+                    style={{ MozAppearance: "textfield" }}
+                  />
+                ))}
               </div>
+            </div>
 
-              <div className="text-center md:ml-5">
-                <label
-                  htmlFor="secs"
-                  className="text-white font-semibold text-xl md:text-3xl lg:text-4xl text-shadow"
-                >
-                  SECS
-                </label>
-                <div className="flex flex-row justify-center items-center space-x-1.5 md:space-x-3 mt-3">
-                  {secondDigits.map((digit, index) => (
-                    <input
-                      key={`second-${index}`}
-                      type="number"
-                      disabled
-                      className="outline-none w-10 h-14 md:w-14 md:h-20 lg:w-20 lg:h-28 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-2xl md:text-5xl lg:text-6xl"
-                      value={digit}
-                      style={{ MozAppearance: "textfield" }}
-                    />
-                  ))}
-                </div>
+            <div className="text-center">
+              <label
+                htmlFor="mins"
+                className="text-white font-semibold text-lg md:text-3xl lg:text-3xl text-shadow "
+              >
+                MINS
+              </label>
+              <div className="flex justify-center items-center space-x-1 md:space-x-3 mt-1.5 md:mt-3">
+                {minuteDigits.map((digit, index) => (
+                  <input
+                    key={`minute-${index}`}
+                    type="number"
+                    disabled
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    value={digit}
+                    style={{ MozAppearance: "textfield" }}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <label
+                htmlFor="secs"
+                className="text-white font-semibold text-lg md:text-3xl lg:text-3xl text-shadow "
+              >
+                SECS
+              </label>
+              <div className="flex justify-center items-center space-x-1 md:space-x-3 mt-1.5 md:mt-3">
+                {secondDigits.map((digit, index) => (
+                  <input
+                    key={`second-${index}`}
+                    type="number"
+                    disabled
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    value={digit}
+                    style={{ MozAppearance: "textfield" }}
+                  />
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="mt-20 flex-col flex md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-10">
+          <div className="mt-16 md:mt-20 flex items-center justify-center space-x-4 md:space-x-10">
             <div>
               <a
                 href="https://forms.gle/2LhNuqZ98DwFEnDe7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
               >
-                Register Now
+                <button className="font-bold px-5 py-2.5 md:px-6 md:py-3.5 text-white md:text-2xl lg:text-2xl border-2 border-cse-cyan hover:bg-cse-violet transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover">
+                  Register Now
+                </button>
               </a>
             </div>
             <div>
@@ -171,9 +168,10 @@ const App = () => {
                 href="https://linktr.ee/sparzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold px-5 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet hover:shadow-glow transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
               >
-                Contact Us
+                <button className="font-bold px-5 py-2.5 md:px-6 md:py-3.5 text-white md:text-2xl lg:text-2xl border-2 border-cse-cyan hover:bg-cse-violet over:shadow-glow transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover">
+                  Contact Us
+                </button>
               </a>
             </div>
           </div>
