@@ -47,25 +47,25 @@ const App = () => {
   return (
     <div className="">
       {/* Banner */}
-      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 py-10 relative">
+      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 relative">
         <div className="">
-          <h1 className="mt-5 md:mt-0 text-6xl md:text-8xl lg:text-9xl md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl mb-2 md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
             SPARZO’24
           </h1>
           <h2
-            className="text-white text-lg md:text-3xl lg:text-4xl mb-7 md:mb-12"
+            className="text-white text-xl md:text-3xl lg:text-4xl mb-7 md:mb-12"
             style={{
               fontFamily: "Porter Sans Block",
             }}
           >
             LET’S VIBE WITH US
           </h2>
-          <h3 className="text-white text-lg md:text-4xl font-bold tracking-widest text-shadow ">
+          <h3 className="text-white text-xl md:text-4xl font-bold tracking-widest text-shadow ">
             THE GREAT EVENTS STARTS IN
           </h3>
 
           {/* TIME LEFT */}
-          <div className="mt-5 md:mt-10 flex items-center justify-center space-x-3 md:space-x-10">
+          <div className="mt-5 md:mt-10 flex items-center justify-center space-x-4 md:space-x-10">
             <div className="text-center">
               <label
                 htmlFor="days"
@@ -182,19 +182,19 @@ const App = () => {
       <section className="bg-[url('/ellipse.png')] bg-cse-main bg-cover bg-no-repeat bg-center">
         <div className="space-y-6 md:space-y-12 px-1 text-center py-16 md:py-20 lg:py-20">
           <div className="space-y-3 md:space-y-5">
-            <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
+            <h3 className="text-white text-lg md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Department of
             </h3>
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-stroke-1-cse-cyan tracking-wide">
+            <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Computer Science & Engineering
             </h1>
-            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
+            <h2 className="text-white text-lg md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Government College of Engineering, Tiruneveli
             </h2>
           </div>
 
           <div className="space-y-3">
-            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
+            <h1 className="text-white text-3xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Proudly Presents
             </h1>
             <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wider text-shadow-violet">
@@ -224,7 +224,7 @@ const App = () => {
       </section>
 
       {/* Event details */}
-      <section className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center m-0 p-0 overflow-hidden min-h-screen">
+      <section className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
         <div className="bg-cse-main bg-opacity-50 w-full py-10">
           <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center">
             EVENTS
@@ -235,7 +235,7 @@ const App = () => {
               TECHNICAL EVENTS
             </h1>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
               <Events
                 name={"Code Debugging"}
                 img={"/technical-event.png"}
@@ -259,17 +259,6 @@ const App = () => {
                 details={"Code debugging "}
               />
             </div>
-
-            <button className="mt-10 flex mx-auto">
-              <a
-                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
-              >
-                Register Now
-              </a>
-            </button>
           </div>
 
           <div className="container px-10 md:px-24 lg:px-32 mt-14">
@@ -277,7 +266,7 @@ const App = () => {
               NON-TECHNICAL EVENTS
             </h1>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
               <Events
                 name={"Code Debugging"}
                 img={"/technical-event.png"}
@@ -290,17 +279,6 @@ const App = () => {
                 details={"Code debugging "}
               />
             </div>
-
-            <button className="mt-10 flex mx-auto">
-              <a
-                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
-              >
-                Register Now
-              </a>
-            </button>
           </div>
 
           <div className="container px-10 md:px-24 lg:px-32 mt-14">
@@ -308,7 +286,7 @@ const App = () => {
               ONLINE EVENTS
             </h1>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-8 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
               <Events
                 name={"Code Debugging"}
                 img={"/technical-event.png"}
@@ -321,17 +299,6 @@ const App = () => {
                 details={"Code debugging "}
               />
             </div>
-
-            <button className="mt-10 flex mx-auto">
-              <a
-                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold px-6 py-3.5 text-white text-xl md:text-2xl lg:text-3xl border-2 border-cse-cyan hover:bg-cse-violet  transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover"
-              >
-                Register Now
-              </a>
-            </button>
           </div>
         </div>
       </section>
