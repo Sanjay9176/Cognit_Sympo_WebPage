@@ -3,6 +3,7 @@ import "./fonts/stylesheet.css";
 import { useEffect } from "react";
 import { useMemo } from "react";
 import Events from "./components/Events";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -302,6 +303,9 @@ const App = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

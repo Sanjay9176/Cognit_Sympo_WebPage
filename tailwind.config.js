@@ -8,6 +8,7 @@ export default {
       },
 
       textStrokeWidth: {
+        0: "0.5px",
         1: "0.7px",
         2: "2px",
         3: "3px",
