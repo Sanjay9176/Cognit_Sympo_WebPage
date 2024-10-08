@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./fonts/stylesheet.css";
 import { useEffect } from "react";
 import { useMemo } from "react";
-import Events from "./components/Events";
+import { Link } from "react-scroll";
+import EventsCard from "./components/EventsCard";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -80,7 +81,7 @@ const App = () => {
                     key={`day-${index}`}
                     type="number"
                     disabled
-                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-lg text-center text-xl md:text-4xl lg:text-5xl"
                     value={digit}
                     style={{ MozAppearance: "textfield" }}
                   />
@@ -101,7 +102,7 @@ const App = () => {
                     key={`hour-${index}`}
                     type="number"
                     disabled
-                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-lg text-center text-xl md:text-4xl lg:text-5xl"
                     value={digit}
                     style={{ MozAppearance: "textfield" }}
                   />
@@ -122,7 +123,7 @@ const App = () => {
                     key={`minute-${index}`}
                     type="number"
                     disabled
-                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-lg text-center text-xl md:text-4xl lg:text-5xl"
                     value={digit}
                     style={{ MozAppearance: "textfield" }}
                   />
@@ -143,7 +144,7 @@ const App = () => {
                     key={`second-${index}`}
                     type="number"
                     disabled
-                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-xl text-center text-xl md:text-4xl lg:text-5xl"
+                    className="outline-none w-8 h-12 md:w-14 md:h-20 lg:w-16 lg:h-24 bg-white shadow-lg shadow-cse-cyan rounded-lg text-center text-xl md:text-4xl lg:text-5xl"
                     value={digit}
                     style={{ MozAppearance: "textfield" }}
                   />
@@ -206,98 +207,132 @@ const App = () => {
       </section>
 
       {/* Events */}
-      <section className="bg-cse-main py-5 md:pt-10 md:pb-20 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-RubikDoodle font-semibold text-white tracking-widest text-shadow-violet">
+      <section className="bg-cse-main py-10 md:pt-10 md:pb-20 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-RubikDoodle text-white tracking-widest text-shadow-violet">
           HAPPENINGS
         </h1>
 
         <div className="mt-10 flex-col flex items-center justify-center space-y-8 md:space-y-9">
-          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
-            Technical Events
-          </button>
-          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
-            Non-Technical Events
-          </button>
-          <button className="text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:cursor-default hover:bg-cse-violet hover:border-cse-cyan text-shadow">
-            Online Events
-          </button>
+          <Link to="technical-events" spy={true} smooth={true} duration={500}>
+            <button className="happenings-btns">Technical Events</button>
+          </Link>
+          <Link
+            to="non-technical-events"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <button className="happenings-btns">Non-Technical Events</button>
+          </Link>
+          <Link to="online-events" spy={true} smooth={true} duration={500}>
+            <button className="happenings-btns">Online Events</button>
+          </Link>
         </div>
       </section>
 
       {/* Event details */}
       <section className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
-        <div className="bg-cse-main bg-opacity-50 w-full py-10">
-          <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center">
+        <div className="bg-cse-main bg-opacity-50 w-full py-16">
+          <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center text-shadow-violet tracking-wider">
             EVENTS
           </h1>
 
-          <div className="container px-10 md:px-24 lg:px-32 mt-10">
+          <div
+            id="technical-events"
+            className="container px-10 md:px-12 lg:px-32 mt-10"
+          >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               TECHNICAL EVENTS
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Paper Presentation 📃"}
+                img={"/paperpresentation.png"}
+                details={
+                  "Papers may be submitted by teams consisting of 1 to 3 students."
+                }
               />
 
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Code Hunt 💻"}
+                img={"/code-hunt.png"}
+                details={
+                  "Welcome to Code Hunt, an intense multi-round coding competition designed to test your programming"
+                }
               />
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"WebCraft 🎨"}
+                img={"/webcraft.png"}
+                details={
+                  "Design an invitation, banner, logo, or thumbnail using Canva or similar tools.The specific design task will be provided on the spot."
+                }
               />
 
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"SympAI 🤖"}
+                img={"/sympai.png"}
+                details={
+                  "Unleash your ingenuity in Symp AI, a cutting-edge technical challenge crafted for AI pioneers! "
+                }
               />
             </div>
           </div>
 
-          <div className="container px-10 md:px-24 lg:px-32 mt-14">
+          <div
+            id="non-technical-events"
+            className="container px-10 md:px-12 lg:px-32 mt-14"
+          >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               NON-TECHNICAL EVENTS
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Adzap 🎭"}
+                img={"/adzap.png"}
+                details={"Create funny advertisements for imaginary products!"}
               />
 
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Clue Clash 🧩"}
+                img={"/clue-clash.png"}
+                details={
+                  "Clue Clash is an exciting two-round competition designed to test participants' problem-solving, decoding, and quick-thinking skills"
+                }
+              />
+
+              <EventsCard
+                name={"Fusionary 💡"}
+                img={"/fusionary.png"}
+                details={
+                  "Connect the dots, decode the clues—where sharp minds and teamwork spark victory!"
+                }
               />
             </div>
           </div>
 
-          <div className="container px-10 md:px-24 lg:px-32 mt-14">
+          <div
+            id="online-events"
+            className="container px-10 md:px-12 lg:px-32 mt-14"
+          >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               ONLINE EVENTS
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Cinewhiz 🎬"}
+                img={"/cinewhiz.png"}
+                details={
+                  "Welcome to Code Hunt, an intense multi-round coding competition designed to test your programming"
+                }
               />
 
-              <Events
-                name={"Code Debugging"}
-                img={"/technical-event.png"}
-                details={"Code debugging "}
+              <EventsCard
+                name={"Shutter Stories 📸"}
+                img={"/shutter-stories.png"}
+                details={"Submit your best photograph based on a theme!"}
               />
             </div>
           </div>

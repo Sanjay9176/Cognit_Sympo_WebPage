@@ -41,8 +41,8 @@ body {
 }
 
 .text-shadow-violet {
-  text-shadow: 2px 1px 0 var(--cse-cyan), 2px -2px 0 var(--cse-cyan),
-    2px -2px 0px var(--cse-cyan), 1px 1px 0 var(--cse-cyan),
+  text-shadow: 2px 1px 0 var(--cse-cyan), 1px 1px 0 var(--cse-cyan),
+    2px 0px 0px var(--cse-cyan), 1px 1px 0 var(--cse-cyan),
     0px 0px 20px var(--cse-violet),
     /* Inner glow */ 0 0px 20px var(--cse-violet); /* Outer glow */
 }
@@ -60,4 +60,8 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.happenings-btns {
+  @apply text-white font-semibold text-xl md:text-2xl lg:text-3xl px-6 py-3.5 border border-cse-violet rounded-lg shadow-glow shadow-glow-hover transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:bg-cse-violet hover:border-cse-cyan text-shadow;
 }
