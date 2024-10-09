@@ -17,6 +17,8 @@ const Home = () => {
   const targetDate = useMemo(() => new Date("2024-10-16T10:00:00"), []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const interval = setInterval(() => {
       const now = new Date();
       const distance = targetDate - now;
@@ -251,7 +253,7 @@ const Home = () => {
                   name={"Paper Presentation 📃"}
                   img={"/paperpresentation.png"}
                   details={
-                    "Papers may be submitted by teams consisting of 1 to 3 students."
+                    "Showcase and present a topic related to computer science."
                   }
                 />
               </RouterLink>
@@ -261,7 +263,7 @@ const Home = () => {
                   name={"Code Hunt 💻"}
                   img={"/code-hunt.png"}
                   details={
-                    "Welcome to Code Hunt, an intense multi-round coding competition designed to test your programming"
+                    " Code Hunt,an intense multi-round coding competition designed to test your programming"
                   }
                 />
               </RouterLink>
@@ -271,7 +273,7 @@ const Home = () => {
                   name={"WebCraft 🎨"}
                   img={"/webcraft.png"}
                   details={
-                    "Design an invitation, banner, logo, or thumbnail using Canva or similar tools.The specific design task will be provided on the spot."
+                    "Design an invitation, banner, logo, or thumbnail using Canva or similar tools."
                   }
                 />
               </RouterLink>
@@ -281,7 +283,7 @@ const Home = () => {
                   name={"SympAI 🤖"}
                   img={"/sympai.png"}
                   details={
-                    "Unleash your ingenuity in Symp AI, a cutting-edge technical challenge crafted for AI pioneers! "
+                    "Symp AI, a cutting edge technical challenge crafted for AI pioneers!"
                   }
                 />
               </RouterLink>
@@ -307,7 +309,7 @@ const Home = () => {
                 name={"Clue Clash 🧩"}
                 img={"/clue-clash.png"}
                 details={
-                  "Clue Clash is an exciting two-round competition designed to test participants' problem-solving, decoding, and quick-thinking skills"
+                  "Clue Clash competition designed to test participant's problem-solving, decoding, and quick-thinking skills"
                 }
               />
 
@@ -334,7 +336,7 @@ const Home = () => {
                 name={"Cinewhiz 🎬"}
                 img={"/cinewhiz.png"}
                 details={
-                  "Welcome to Code Hunt, an intense multi-round coding competition designed to test your programming"
+                  "Showcase your storytelling creativity and cinematic skills."
                 }
               />
 

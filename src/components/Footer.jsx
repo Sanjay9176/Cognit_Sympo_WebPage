@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-cse-main px-3 md:px-10 py-7 md:py-10 text-center -mt-8 md:-mt-5">
+    <footer className="bg-cse-main px-3 md:px-10 py-7 md:pt-10 md:pb-5 text-center -mt-8 md:-mt-5">
       <div className="container">
         <div className="text-white space-y-3">
           <h1 className="text-shadow text-2xl md:text-3xl lg:text-4xl tracking-wide">
@@ -59,11 +59,15 @@ const Footer = () => {
                 target="_blank"
                 className="flex flex-col justify-center items-center"
               >
-                <img
-                  src="/Envelope.png"
-                  className="lg:w-8 lg:h-8 md:w-7 md:h-7"
-                  alt="mail"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="38"
+                  height="38"
+                  viewBox="0 0 24 24"
+                  className="fill-current text-white lg:w-10 lg:h-10 md:w-8 md:h-8 w-7 h-7 hover:text-gray-400"
+                >
+                  <path d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"></path>
+                </svg>
               </a>
             </div>
             <div>
@@ -73,11 +77,15 @@ const Footer = () => {
                 target="_blank"
                 className="flex flex-col justify-center items-center"
               >
-                <img
-                  src="/instagram.png"
-                  className="lg:w-8 lg:h-8 md:w-7 md:h-7"
-                  alt="instagram"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="38"
+                  height="38"
+                  viewBox="0 0 24 24"
+                  className="fill-current text-white lg:w-10 lg:h-10 md:w-8 md:h-8 w-7 h-7 hover:text-gray-400"
+                >
+                  <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"></path>
+                </svg>
               </a>
             </div>
             <div>
@@ -87,18 +95,22 @@ const Footer = () => {
                 target="_blank"
                 className="flex flex-col justify-center items-center"
               >
-                <img
-                  src="/Linkedin.png"
-                  className="lg:w-8 lg:h-8 md:w-7 md:h-7"
-                  alt="linkedin"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="38"
+                  height="38"
+                  viewBox="0 0 24 24"
+                  className="fill-current text-white lg:w-10 lg:h-10 md:w-8 md:h-8 w-7 h-7 hover:text-gray-400"
+                >
+                  <path d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"></path>
+                </svg>
               </a>
             </div>
           </div>
         </div>
         <div className="mt-10 text-white">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold text-shadow">
-            Department Of CSE
+            Department of CSE
           </h1>
           <div className="mt-2 flex items-center justify-center space-x-2">
             <div className="text-xl md:text-2xl lg:text-3xl text-shadow flex items-center">
