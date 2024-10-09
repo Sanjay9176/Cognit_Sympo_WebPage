@@ -233,7 +233,7 @@ const Home = () => {
       </section>
 
       {/* Event details */}
-      <section className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
+      <section className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
         <div className="bg-cse-main bg-opacity-50 w-full py-16">
           <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center text-shadow-violet tracking-wider">
             EVENTS
