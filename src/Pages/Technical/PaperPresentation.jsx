@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import BackToHome from "../../components/BackToHome";
 
 const PaperPresentation = () => {
@@ -8,7 +7,7 @@ const PaperPresentation = () => {
   });
 
   return (
-    <div className="bg-[url('events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
+    <div className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
       <div className="bg-cse-main bg-opacity-50 w-full px-3 py-10 pb-16 lg:py-16">
         <div
           className="container px-4 md:px-5 lg:px-8 py-6 rounded-lg border border-cse-cyan bg-cse-main
