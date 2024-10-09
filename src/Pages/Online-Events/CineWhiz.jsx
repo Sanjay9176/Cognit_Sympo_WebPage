@@ -173,7 +173,7 @@ const CineWhiz = () => {
               <span className="absolute left-0 top-0.5 list-disc list-inside font-semibold">
                 •
               </span>
-              Creativity: Innovation and originality in visual and audio
+              Creativity : Innovation and originality in visual and audio
               presentation.
             </li>
             <li className="relative pl-4">

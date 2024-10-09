@@ -82,13 +82,13 @@ const PaperPresentation = () => {
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
+              Email submissions by Oct 15 to :{" "}
               <a
                 href="mailto:tamilarasan_s.cse.44@gcetly.ac.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="break-words"
+                className="break-words font-bold"
               >
-                Email submissions by Oct 15 to :
                 tamilarasan_s.cse.44@gcetly.ac.in
               </a>
             </li>
