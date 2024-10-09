@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BackToHome from "../../components/BackToHome";
+import RegisterBtn from "../../components/RegisterBtn";
 
 const SympAi = () => {
   useEffect(() => {
@@ -184,7 +185,10 @@ shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
             </li>
           </ul>
         </div>
-        <BackToHome />
+        <div className="mt-10 flex items-center justify-center space-x-5">
+          <BackToHome />
+          <RegisterBtn />
+        </div>
       </div>
     </div>
   );

@@ -17,8 +17,6 @@ const Home = () => {
   const targetDate = useMemo(() => new Date("2024-10-16T10:00:00"), []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-
     const interval = setInterval(() => {
       const now = new Date();
       const distance = targetDate - now;
@@ -299,27 +297,35 @@ const Home = () => {
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <EventsCard
-                name={"Adzap 🎭"}
-                img={"/adzap.png"}
-                details={"Create funny advertisements for imaginary products!"}
-              />
+              <RouterLink to={"/adzap"}>
+                <EventsCard
+                  name={"Adzap 🎭"}
+                  img={"/adzap.png"}
+                  details={
+                    "Create funny advertisements for imaginary products!"
+                  }
+                />
+              </RouterLink>
 
-              <EventsCard
-                name={"Clue Clash 🧩"}
-                img={"/clue-clash.png"}
-                details={
-                  "Clue Clash competition designed to test participant's problem-solving, decoding, and quick-thinking skills"
-                }
-              />
+              <RouterLink to={"/clueclash"}>
+                <EventsCard
+                  name={"Clue Clash 🧩"}
+                  img={"/clue-clash.png"}
+                  details={
+                    "Clue Clash competition designed to test participant's problem-solving, decoding, and quick-thinking skills"
+                  }
+                />
+              </RouterLink>
 
-              <EventsCard
-                name={"Fusionary 💡"}
-                img={"/fusionary.png"}
-                details={
-                  "Connect the dots, decode the clues—where sharp minds and teamwork spark victory!"
-                }
-              />
+              <RouterLink to={"/fusionary"}>
+                <EventsCard
+                  name={"Fusionary 💡"}
+                  img={"/fusionary.png"}
+                  details={
+                    "Connect the dots, decode the clues—where sharp minds and teamwork spark victory!"
+                  }
+                />
+              </RouterLink>
             </div>
           </div>
 
@@ -332,19 +338,23 @@ const Home = () => {
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <EventsCard
-                name={"Cinewhiz 🎬"}
-                img={"/cinewhiz.png"}
-                details={
-                  "Showcase your storytelling creativity and cinematic skills."
-                }
-              />
+              <RouterLink to={"/cinewhiz"}>
+                <EventsCard
+                  name={"Cinewhiz 🎬"}
+                  img={"/cinewhiz.png"}
+                  details={
+                    "Showcase your storytelling creativity and cinematic skills."
+                  }
+                />
+              </RouterLink>
 
-              <EventsCard
-                name={"Shutter Stories 📸"}
-                img={"/shutter-stories.png"}
-                details={"Submit your best photograph based on a theme!"}
-              />
+              <RouterLink to={"/shutterstories"}>
+                <EventsCard
+                  name={"Shutter Stories 📸"}
+                  img={"/shutter-stories.png"}
+                  details={"Submit your best photograph based on a theme!"}
+                />
+              </RouterLink>
             </div>
           </div>
         </div>

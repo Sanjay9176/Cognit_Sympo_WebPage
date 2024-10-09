@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
             <div>
               <a
-                href="https://www.linkedin.com/school/gcetirunelveli/"
+                href="https://www.linkedin.com/in/gcetirunelveli"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex flex-col justify-center items-center"
