@@ -7,6 +7,11 @@ import Home from "./Pages/Home.jsx";
 import CodeHunt from "./Pages/Technical/CodeHunt.jsx";
 import Webcraft from "./Pages/Technical/Webcraft.jsx";
 import SympAi from "./Pages/Technical/SympAi.jsx";
+import Adzap from "./Pages/Non-Technical/Adzap.jsx";
+import ClueClash from "./Pages/Non-Technical/ClueClash.jsx";
+import Fusionary from "./Pages/Non-Technical/Fusionary.jsx";
+import CineWhiz from "./Pages/Online-Events/CineWhiz.jsx";
+import ShutterStories from "./Pages/Online-Events/ShutterStories.jsx";
 
 const route = createBrowserRouter([
   {
@@ -34,6 +39,27 @@ const route = createBrowserRouter([
       {
         path: "/sympai",
         element: <SympAi />,
+      },
+
+      {
+        path: "/adzap",
+        element: <Adzap />,
+      },
+      {
+        path: "/clueclash",
+        element: <ClueClash />,
+      },
+      {
+        path: "/fusionary",
+        element: <Fusionary />,
+      },
+      {
+        path: "/cinewhiz",
+        element: <CineWhiz />,
+      },
+      {
+        path: "/shutterstories",
+        element: <ShutterStories />,
       },
     ],
   },

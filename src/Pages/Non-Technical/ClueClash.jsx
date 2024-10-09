@@ -2,153 +2,189 @@ import { useEffect } from "react";
 import BackToHome from "../../components/BackToHome";
 import RegisterBtn from "../../components/RegisterBtn";
 
-const PaperPresentation = () => {
+const ClueClash = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   return (
     <div className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
-      <div className="bg-cse-main bg-opacity-50 w-full px-3 py-10 pb-16 lg:py-16">
+      <div className="bg-cse-main bg-opacity-50 w-full py-10 pb-16 px-3 lg:py-16">
         <div
           className="container px-4 md:px-5 lg:px-8 py-6 rounded-lg border border-cse-cyan bg-cse-main
-        shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
+shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
         >
           <h1 className="text-shadow text-2xl md:text-3xl lg:text-4xl text-white font-semibold mb-5 text-center">
-            Paper Presentation 📃
+            Clue Clash 🧩
           </h1>
 
           <div className="mb-4">
             <img
-              src="/paperpresentation.png"
-              alt="Paper Presentation"
+              src="/clue-clash.png"
+              alt="Clue Clash"
               className="w-full md:h-[400px] lg:h-[500px] object-cover rounded-lg border border-fuchsia-600"
             />
           </div>
 
           <p className="text-shadow text-white md:text-lg lg:text-xl">
-            An individual or team-based event where participants present their
-            research or topics related to Computer Science in a PowerPoint
-            format.
+            Clue Clash is an exciting two-round competition designed to test
+            participants' problem-solving, decoding, and quick-thinking skills.
+            It is a team-based event where only two participants per team are
+            allowed, and the event will challenge participants through word
+            games and a thrilling treasure hunt.
           </p>
+
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Rounds :
+            Round 1 : Guess the Word
           </h2>
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Objective : Present a paper on a Computer Science topic using
-              PowerPoint.
+              Objective : Teams receive clues and must guess the correct word.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Time Limit : Each team has 10 minutes to present their paper.
+              Clues can be descriptions, synonyms, antonyms, or hidden meanings.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Format : The presentation must not exceed 15 slides.
+              Teams collaborate to brainstorm answers.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Elimination : The lowest-scoring teams in this round will be
+              eliminated.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Scoring : Points awarded for correct guesses; bonus for speed.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Time Limit : 30 minutes to solve as many clues as possible.
             </li>
           </ul>
 
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Rules and Guidelines :
+            Round 2 : Treasure Hunt
           </h2>
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              7 minutes for presentation + 3 minutes for Q&A.
+              Objective : Teams solve a series of clues leading to hidden
+              locations or objects, then decode a final answer.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Submit a paper (IEEE format) and a PPT about the paper.
+              Teams follow clues in a designated area to find words or objects.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              📝 No page limit for the IEEE paper, but PPT max 15 slides.
+              Clues unlock stages, leading to a final output that needs
+              decoding.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              <a
-                href="mailto:tamilarasan_s.cse.44@gcetly.ac.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="break-words"
-              >
-                Email submissions by Oct 15 to :
-                tamilarasan_s.cse.44@gcetly.ac.in
-              </a>
-            </li>
-            <h3 className="text-shadow">Email must include : </h3>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              Subject : Your full name + college name
+              Scoring: Points based on how quickly and accurately teams complete
+              the hunt.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Content : Name, mobile number, domain, paper title, Team name ,
-              Team member details.
+              Scoring : Points awarded for correct guesses; bonus for speed.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Attachments : IEEE paper as PDF and presentation as PPTX
-            </li>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              Those who register offline should bring the PPT and IEEE soft copy
-              with them .
+              Time Limit : 30 minutes to solve as many clues as possible.
             </li>
           </ul>
-          <h2 className="mt-2 text-white font-semibold text-lg text-shadow">
-            Carry a soft copy on a pen drive or other storage device.
-          </h2>
 
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Judging & Evaluation :
+            Rules and Regulations :
           </h2>
-
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              A panel of judges will evaluate the papers.
+              Team Composition : 2 participants per team.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Evaluation criteria will be partly announced before the event.
+              No External Help : Teams cannot use external resources or devices
+              (unless allowed).
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Judge’s decision is final.
+              Timing : Answers must be submitted within the time limit.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Fair Play : Cheating leads to disqualification.
+            </li>
+          </ul>
+
+          <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
+            Judging Criteria :
+          </h2>
+          <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Scoring : Cumulative points from both rounds.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Bonus Points : Awarded for faster responses and accurate decoding.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Final Ranking : Based on total points across both rounds.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Elimination : Teams eliminated in Round 1 will not
+              advance to Round 2.
             </li>
           </ul>
         </div>
+
         <div className="mt-10 flex items-center justify-center space-x-5">
           <BackToHome />
           <RegisterBtn />
@@ -158,4 +194,4 @@ const PaperPresentation = () => {
   );
 };
 
-export default PaperPresentation;
+export default ClueClash;

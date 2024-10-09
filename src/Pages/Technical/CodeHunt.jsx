@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import BackToHome from "../../components/BackToHome";
+import RegisterBtn from "../../components/RegisterBtn";
 
 const CodeHunt = () => {
   useEffect(() => {
@@ -173,7 +174,10 @@ const CodeHunt = () => {
             </li>
           </ul>
         </div>
-        <BackToHome />
+        <div className="mt-10 flex items-center justify-center space-x-5">
+          <BackToHome />
+          <RegisterBtn />
+        </div>
       </div>
     </div>
   );

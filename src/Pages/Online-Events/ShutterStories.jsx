@@ -1,151 +1,173 @@
-import { useEffect } from "react";
 import BackToHome from "../../components/BackToHome";
 import RegisterBtn from "../../components/RegisterBtn";
 
-const PaperPresentation = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
+const ShutterStories = () => {
   return (
     <div className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
       <div className="bg-cse-main bg-opacity-50 w-full px-3 py-10 pb-16 lg:py-16">
         <div
           className="container px-4 md:px-5 lg:px-8 py-6 rounded-lg border border-cse-cyan bg-cse-main
-        shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
+shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
         >
           <h1 className="text-shadow text-2xl md:text-3xl lg:text-4xl text-white font-semibold mb-5 text-center">
-            Paper Presentation 📃
+            Shutter Stories 📸
           </h1>
 
           <div className="mb-4">
             <img
-              src="/paperpresentation.png"
-              alt="Paper Presentation"
+              src="/shutter-stories.png"
+              alt="Shutter Stories"
               className="w-full md:h-[400px] lg:h-[500px] object-cover rounded-lg border border-fuchsia-600"
             />
           </div>
 
           <p className="text-shadow text-white md:text-lg lg:text-xl">
-            An individual or team-based event where participants present their
-            research or topics related to Computer Science in a PowerPoint
-            format.
+            An individual photography competition where participants capture
+            images based on a given theme. The event is divided into two rounds:
+            online submission and an on-campus shoot for selected participants.
           </p>
+
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Rounds :
+            Round 1 : Online Submission
           </h2>
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Objective : Present a paper on a Computer Science topic using
-              PowerPoint.
+              Topic : "Portrait of Passion"
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Time Limit : Each team has 10 minutes to present their paper.
-            </li>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              Format : The presentation must not exceed 15 slides.
+              Objective : Submit original photographs with no editing or
+              alterations allowed.
             </li>
           </ul>
 
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Rules and Guidelines :
+            Submission Details :
           </h2>
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              7 minutes for presentation + 3 minutes for Q&A.
+              Submission Details :
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Submit a paper (IEEE format) and a PPT about the paper.
-            </li>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              📝 No page limit for the IEEE paper, but PPT max 15 slides.
-            </li>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
+              Submit via email to
               <a
-                href="mailto:tamilarasan_s.cse.44@gcetly.ac.in"
+                href="mailto:shutterstories2024@gmail.com"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="break-words"
+                rel="noreferrer noopener"
               >
-                Email submissions by Oct 15 to :
-                tamilarasan_s.cse.44@gcetly.ac.in
+                shutterstories2024@gmail.com
               </a>
-            </li>
-            <h3 className="text-shadow">Email must include : </h3>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              Subject : Your full name + college name
+              by October 14.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Content : Name, mobile number, domain, paper title, Team name ,
-              Team member details.
+              Include a brief description explaining the story or inspiration
+              behind the photograph.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Attachments : IEEE paper as PDF and presentation as PPTX
+              Provide the following details in the email :
             </li>
             <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
+              <span className="absolute left-0 top-0.5 list-disc list-inside font-semibold">
                 •
               </span>
-              Those who register offline should bring the PPT and IEEE soft copy
-              with them .
+              Name, College Name, Phone Number, Email ID
             </li>
           </ul>
-          <h2 className="mt-2 text-white font-semibold text-lg text-shadow">
-            Carry a soft copy on a pen drive or other storage device.
-          </h2>
 
           <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
-            Judging & Evaluation :
+            Round 2 : On-Campus
           </h2>
-
           <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              A panel of judges will evaluate the papers.
+              Topic : Provided on-site during the event.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Evaluation criteria will be partly announced before the event.
+              Objective : Only those selected from Round 1 will participate in
+              this round, where they will be given a new topic and shoot on
+              campus.
+            </li>
+          </ul>
+
+          <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow">
+            Rules and Regulations :
+          </h2>
+          <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Photographs can be taken using a phone camera. No professional
+              cameras are required.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Judge’s decision is final.
+              Ensure the photograph is free from any digital enhancements or
+              modifications.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Late submissions or failure to comply with the rules will result
+              in disqualification.
+            </li>
+          </ul>
+
+          <h2 className="mt-4 text-white font-semibold text-xl lg:text-2xl text-shadow mb-2">
+            Judging Criteria :
+          </h2>
+          <p className="text-shadow text-white text-lg">
+            Submissions will be evaluated based on the following :
+          </p>
+          <ul className="text-shadow md:text-lg text-white list-none mt-2 ml-1 md:ml-2 lg:ml-4 space-y-1">
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Creativity and originality.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Alignment with the given theme.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Composition and visual appeal.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Impact and story conveyed through the photograph and description.
             </li>
           </ul>
         </div>
@@ -158,4 +180,4 @@ const PaperPresentation = () => {
   );
 };
 
-export default PaperPresentation;
+export default ShutterStories;
