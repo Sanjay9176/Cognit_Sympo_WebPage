@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import BackToHome from "../../components/BackToHome";
 import RegisterBtn from "../../components/RegisterBtn";
 
 const CineWhiz = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
       <div className="bg-cse-main bg-opacity-50 w-full px-3 py-10 pb-16 lg:py-16">
