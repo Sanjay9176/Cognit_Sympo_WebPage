@@ -59,20 +59,15 @@ shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Submission Details :
-            </li>
-            <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside">
-                •
-              </span>
-              Submit via email to
+              Submit via email to{" "}
               <a
                 href="mailto:shutterstories2024@gmail.com"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="font-bold"
               >
                 shutterstories2024@gmail.com
-              </a>
+              </a>{" "}
               by October 14.
             </li>
             <li className="relative pl-4">
@@ -89,10 +84,13 @@ shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
               Provide the following details in the email :
             </li>
             <li className="relative pl-4">
-              <span className="absolute left-0 top-0.5 list-disc list-inside font-semibold">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Name, College Name, Phone Number, Email ID
+              <span className="font-bold">
+                {" "}
+                Name, College Name, Phone Number, Email ID
+              </span>
             </li>
           </ul>
 
