@@ -146,7 +146,7 @@ const Webcraft = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-10 flex items-center justify-center space-x-5">
+        <div className="mt-10 flex-col-reverse gap-y-5 md:flex-row flex items-center justify-center md:gap-y-0 md:space-x-5">
           <BackToHome />
           <RegisterBtn />
         </div>

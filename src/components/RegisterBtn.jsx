@@ -6,7 +6,7 @@ const RegisterBtn = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button className="font-bold px-4 py-2.5 md:px-6 md:py-3 text-white text-lg border border-cse-cyan hover:bg-cse-violet transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover flex justify-center items-center">
+        <button className="font-bold px-4 py-2.5 md:px-6 md:py-3 text-white md:text-lg border border-cse-cyan hover:bg-cse-violet transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover flex justify-center items-center">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
