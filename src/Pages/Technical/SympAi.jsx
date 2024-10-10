@@ -75,22 +75,27 @@ shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Objective : Design a visually appealing web page with enhanced
-              front-end functionality using specified AI tools.
+              Objective: Design a visually appealing web page with enhanced
+              front-end functionality using AI tools.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Task Provided On the Spot : The design task will be revealed at
-              the start of the round.
+              Task : The design task will be revealed on the spot.
             </li>
             <li className="relative pl-4">
               <span className="absolute left-0 top-0.5 list-disc list-inside">
                 •
               </span>
-              Scoring : Based on creativity, functionality, and design
-              aesthetics.
+              Frontend Focus : Only frontend development required; no backend.
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-0.5 list-disc list-inside">
+                •
+              </span>
+              Scoring : Based on creativity, functionality, and
+              design aesthetics.
             </li>
           </ul>
 
@@ -185,7 +190,7 @@ shadow-[0px_0px_25px_rgba(255,46,255,0.9)] w-full md:w-3/4 lg:w-1/2"
             </li>
           </ul>
         </div>
-        <div className="mt-10 flex items-center justify-center space-x-5">
+        <div className="mt-10 flex-col-reverse gap-y-5 md:flex-row flex items-center justify-center md:gap-y-0 md:space-x-5">
           <BackToHome />
           <RegisterBtn />
         </div>

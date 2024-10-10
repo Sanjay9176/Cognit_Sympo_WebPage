@@ -239,7 +239,7 @@ const Home = () => {
 
           <div
             id="technical-events"
-            className="container px-10 md:px-12 lg:px-32 mt-10"
+            className="container px-7 md:px-12 lg:px-32 mt-10"
           >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               TECHNICAL EVENTS
@@ -290,7 +290,7 @@ const Home = () => {
 
           <div
             id="non-technical-events"
-            className="container px-10 md:px-12 lg:px-32 mt-14"
+            className="container px-7 md:px-12 lg:px-32 mt-14"
           >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               NON-TECHNICAL EVENTS
@@ -331,7 +331,7 @@ const Home = () => {
 
           <div
             id="online-events"
-            className="container px-10 md:px-12 lg:px-32 mt-14"
+            className="container px-7 md:px-12 lg:px-32 mt-14"
           >
             <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
               ONLINE EVENTS
