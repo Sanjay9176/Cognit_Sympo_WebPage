@@ -10,7 +10,7 @@ export default {
       textStrokeWidth: {
         0: "0.3px",
         1: "0.8px",
-        2: "2px",
+        2: "1.5px",
         3: "3px",
         4: "4px",
         5: "5px",
@@ -25,6 +25,7 @@ export default {
         "cse-violet": "#FF2EFF",
         "cse-cyan": "#3DF6FF",
         "cse-main": "#05172D",
+        "cse-dark-cyan": "#3df6ff59",
       },
     },
 
