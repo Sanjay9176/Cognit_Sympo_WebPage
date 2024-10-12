@@ -1,10 +1,14 @@
-import { useState } from "react";
 import "../fonts/stylesheet.css";
-import { useEffect } from "react";
-import { useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
+
 import { Link as Scroll } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
+import Modal from "react-modal";
+
 import EventsCard from "../components/EventsCard";
+import ConfettiEl from "../util/Confetti";
+
+Modal.setAppElement("#root");
 
 const Home = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -16,28 +20,60 @@ const Home = () => {
 
   const targetDate = useMemo(() => new Date("2024-10-16T10:00:00"), []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const distance = targetDate - now;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
 
-      if (distance < 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  useEffect(
+    () => {
+      const hasSeenModal = localStorage.getItem("hasSeenModal");
 
-        setTimeLeft({ days, hours, minutes, seconds });
+      if (!hasSeenModal) {
+        setIsModalOpen(true);
+        setShowConfetti(true);
+
+        localStorage.setItem("hasSeenModal", "true");
       }
-    }, 1000);
 
-    return () => clearInterval(interval);
-  }, [targetDate]);
+      const interval = setInterval(() => {
+        const now = new Date();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(interval);
+          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+          alert("The event has started!");
+        } else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          setTimeLeft({ days, hours, minutes, seconds });
+        }
+      }, 1000);
+
+      return () => clearInterval(interval);
+    },
+    [targetDate],
+    []
+  );
+
+  // Clear the modal flag when the component unmounts or the window is closed
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem("hasSeenModal");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   const splitDigits = (num) => String(num).padStart(2, "0").split("");
 
@@ -49,7 +85,9 @@ const Home = () => {
   return (
     <div className="">
       {/* Banner */}
-      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 relative">
+      {showConfetti && <ConfettiEl />}
+
+      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 relative pb-5 md:pb-10">
         <div className="">
           <h1 className="text-7xl md:text-8xl lg:text-9xl mb-2 md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
             SPARZO’24
@@ -177,8 +215,59 @@ const Home = () => {
               </a>
             </div>
           </div>
+
+          <div className="mt-20">
+            <h1 className="text-white text-shadow-dark-cyan text-stroke-1-cse-dark-cyan text-lg md:text-3xl font-semibold mb-2">
+              Win Exciting Cash Prices
+            </h1>
+            <h2 className="text-white text-shadow-dark-cyan text-stroke-1-cse-dark-cyan text-lg md:text-3xl font-semibold mb-4">
+              Food & Accommodation Available
+            </h2>
+            <h3 className="text-white text-shadow-dark-violet text-stroke-0-cse-violet font-semibold md:text-xl">
+              Participation Certificates Guarantee
+            </h3>
+          </div>
         </div>
       </section>
+
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        overlayClassName="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+        className="relative w-11/12 md:w-2/3 lg:w-2/5 mx-auto my-10 bg-[url('/modal-bg.png')] bg-cover bg-no-repeat bg-center bg-white px-5 py-6 md:py-8 lg:py-10 rounded-lg shadow-lg border border-cse-cyan outline-none text-center"
+      >
+        <span
+          className="absolute -right-3 -top-3.5 bg-cse-violet rounded-full p-0.5 hover:cursor-pointer"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 24 24"
+            className="fill-current text-white"
+          >
+            <path d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"></path>
+          </svg>
+        </span>
+
+        <h1 className="text-white text-shadow-dark-cyan text-stroke-1-cse-dark-cyan text-xl md:text-3xl font-semibold mb-2">
+          💸 Win Exciting Cash Prices 💸
+        </h1>
+        <h2 className="text-white text-shadow-dark-cyan text-stroke-1-cse-dark-cyan text-lg md:text-2xl font-semibold mb-4">
+          Food & Accommodation Available
+        </h2>
+        <h3 className="text-white text-shadow-dark-violet text-stroke-0-cse-violet font-semibold md:text-xl">
+          Participation Certificates Guarantee
+        </h3>
+        <button
+          onClick={() => setIsModalOpen(false)}
+          className="mt-5 text-white text-shadow px-5 py-1.5 rounded border border-cse-cyan font-semibold hover:bg-cse-violet transition-all hover:transition-all"
+        >
+          Close
+        </button>
+      </Modal>
 
       {/* College Name */}
       <section className="bg-[url('/ellipse.png')] bg-cse-main bg-cover bg-no-repeat bg-center">
