@@ -224,7 +224,7 @@ const Home = () => {
               Food & Accommodation Available
             </h2>
             <h3 className="text-white text-shadow-dark-violet text-stroke-0-cse-violet font-semibold md:text-xl">
-              Participation Certificates Guarantee
+              Guaranteed Participant Certificate
             </h3>
           </div>
         </div>
