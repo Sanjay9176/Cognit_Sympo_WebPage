@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-cse-main px-3 md:px-10 py-7 md:pt-10 md:pb-5 text-center -mt-8 md:-mt-5">
+    <footer id = "footer" className="bg-cse-main px-3 md:px-10 py-7 md:pt-10 md:pb-5 text-center -mt-8 md:-mt-5">
       <div className="container">
         <div className="text-white space-y-3">
           <h1 className="text-shadow text-2xl md:text-3xl lg:text-4xl tracking-wide">
@@ -11,7 +11,7 @@ const Footer = () => {
           </h2>
           <div className="!mt-5 flex flex-col justify-center items-center space-y-3">
             <a
-              href="tel:+91 9750795125"
+              href="tel:+91 6374179865"
               className="text-shadow font-semibold text-lg md:text-xl lg:text-2xl text-shadow flex items-center"
             >
               <span>
@@ -25,10 +25,10 @@ const Footer = () => {
                   <path d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"></path>
                 </svg>
               </span>{" "}
-              +91 9750795125
+              +91 6374179865
             </a>
             <a
-              href="tel:+91 9629503642"
+              href="tel:+91 6369189844"
               className="text-shadow font-semibold text-lg md:text-xl lg:text-2xl text-shadow flex items-center"
             >
               <span>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <path d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"></path>
                 </svg>
               </span>{" "}
-              +91 9629503642
+              +91 6369189844
             </a>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="mt-6 flex items-center justify-center space-x-16 md:space-x-32">
             <div>
               <a
-                href="mailto:sparzo.cseofficial@gmail.com"
+                href="mailto:cognit2k24@gmail.com"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex flex-col justify-center items-center"
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
             <div>
               <a
-                href="https://www.instagram.com/sparzo_offl/"
+                href="https://instagram.com/cognit_2k25"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex flex-col justify-center items-center"
@@ -88,24 +88,6 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-            <div>
-              <a
-                href="https://www.linkedin.com/in/gcetirunelveli"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="flex flex-col justify-center items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="38"
-                  height="38"
-                  viewBox="0 0 24 24"
-                  className="fill-current text-white lg:w-10 lg:h-10 md:w-8 md:h-8 w-7 h-7 hover:text-gray-400"
-                >
-                  <path d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"></path>
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
         <div className="mt-10 text-white">
@@ -116,18 +98,18 @@ const Footer = () => {
             <div className="text-xl md:text-2xl lg:text-3xl text-shadow flex items-center">
               <img
                 src="/crosshair.png"
-                alt="Government College Of Engineering"
+                alt="Misrimal Navajee Munoth Jain Engineering College ,Thoraipakkam"
                 className="lg:w-6 lg:h-6 md:w-5 md:h-5 w-4 h-4 mr-2"
               />{" "}
-              Government College Of Engineering
+              Misrimal Navajee Munoth Jain Engineering College
             </div>
           </div>
           <h2 className="mt-3 text-lg md:text-xl lg:text-2xl text-shadow">
-            Tirunelveli
+            Thoraipakkam
           </h2>
         </div>
         <div className="mt-6 text-sm md:text-lg text-stroke-0-cse-cyan text-white">
-          &copy; 2024 GCE CSE Association | All Rights Reserved.
+          &copy; 2025 MNM CSE Association | All Rights Reserved.
         </div>
       </div>
     </footer>

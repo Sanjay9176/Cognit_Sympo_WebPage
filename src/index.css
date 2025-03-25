@@ -46,6 +46,10 @@ body {
     0px 0px 20px var(--cse-violet),
     /* Inner glow */ 0 0px 20px var(--cse-violet); /* Outer glow */
 }
+.text-shadow-red {
+  text-shadow: 4px 4px 10px red;
+}
+
 
 .text-shadow-dark-cyan {
   text-shadow: 0px 0px 10px var(--cse-violet),

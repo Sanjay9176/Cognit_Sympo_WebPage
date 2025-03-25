@@ -18,7 +18,7 @@ const Home = () => {
     seconds: 0,
   });
 
-  const targetDate = useMemo(() => new Date("2024-10-16T10:00:00"), []);
+  const targetDate = useMemo(() => new Date("2025-03-14T09:00:00"), []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -41,7 +41,11 @@ const Home = () => {
         if (distance < 0) {
           clearInterval(interval);
           setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-          alert("The event has started!");
+          alert(`🎉 Event Completed Successfully! 🎉
+
+Thank you all for your incredible support and participation in Cognit'25! Your enthusiasm and energy made this event a grand success. We truly appreciate your contributions and look forward to seeing you again next time!
+
+Stay inspired, stay curious! 🚀💡`);
         } else {
           const days = Math.floor(distance / (1000 * 60 * 60 * 24));
           const hours = Math.floor(
@@ -87,22 +91,35 @@ const Home = () => {
       {/* Banner */}
       {showConfetti && <ConfettiEl />}
 
-      <section className="bg-[url('/home-bg.jpeg')] bg-cover object-cover bg-center min-h-screen bg-no-repeat flex justify-center items-center text-center px-3 relative pb-5 md:pb-10">
-        <div className="">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl mb-2 md:mb-3 jersey-10-regular tracking-wide text-border-cyan text-shadow-cyan">
-            SPARZO’24
-          </h1>
-          <h2
-            className="text-white text-xl md:text-3xl lg:text-4xl mb-7 md:mb-12"
-            style={{
-              fontFamily: "Porter Sans Block",
-            }}
-          >
-            LET’S VIBE WITH US
-          </h2>
-          <h3 className="text-white text-xl md:text-4xl font-bold tracking-widest text-shadow ">
-            THE GREAT EVENTS STARTS IN
-          </h3>
+      <section className="relative min-h-screen flex justify-center items-center text-center px-3 pb-5 md:pb-10 overflow-hidden">
+        <video
+        autoPlay
+        muted
+        loop
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/home-bgm.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="relative z-10">
+    <div className="flex items-center justify-center space-x-4">
+      <img src="logo-cognit.png" alt="Cognit 25 Logo" className="w-16 md:w-24 lg:w-32" />
+      <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wider text-shadow-violet">
+        Cognit’25
+      </h1>
+    </div>
+
+    <h2
+      className="text-white text-xl md:text-3xl lg:text-4xl mb-7 md:mb-12"
+      style={{
+        fontFamily: "Porter Sans Block",
+      }}
+    >
+      LET’S VIBE WITH US
+    </h2>
+    <h3 className="text-white text-xl md:text-4xl font-bold tracking-widest text-shadow ">
+      THE GREAT EVENTS STARTS IN
+    </h3>
 
           {/* TIME LEFT */}
           <div className="mt-5 md:mt-10 flex items-center justify-center space-x-4 md:space-x-10">
@@ -194,7 +211,7 @@ const Home = () => {
           <div className="mt-16 md:mt-20 flex items-center justify-center space-x-4 md:space-x-10">
             <div>
               <a
-                href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScgulYk7h3hglD8-vO8EpvtcKXMeSVwvIvvpNHNZGRLksDFuA/viewform?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -203,17 +220,16 @@ const Home = () => {
                 </button>
               </a>
             </div>
-            <div>
-              <a
-                href="https://linktr.ee/sparzo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="font-bold px-5 py-2.5 md:px-6 md:py-3.5 text-white md:text-2xl lg:text-2xl border-2 border-cse-cyan hover:bg-cse-violet over:shadow-glow transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover">
-                  Contact Us
+            <Scroll 
+            to="footer" 
+            spy={true}
+            smooth={true}
+            duration={500}
+            >
+              <button className="font-bold px-5 py-2.5 md:px-6 md:py-3.5 text-white md:text-2xl lg:text-2xl border-2 border-cse-cyan hover:bg-cse-violet over:shadow-glow transition-all hover:transition-all rounded-lg text-shadow shadow-glow-hover">
+                Contact Us
                 </button>
-              </a>
-            </div>
+            </Scroll>
           </div>
 
           <div className="mt-20">
@@ -234,8 +250,8 @@ const Home = () => {
       <Modal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
-        overlayClassName="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-        className="relative w-11/12 md:w-2/3 lg:w-2/5 mx-auto my-10 bg-[url('/modal-bg.png')] bg-cover bg-no-repeat bg-center bg-white px-5 py-6 md:py-8 lg:py-10 rounded-lg shadow-lg border border-cse-cyan outline-none text-center"
+        overlayClassName="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+        className="relative w-11/12 md:w-2/3 lg:w-2/5 mx-auto my-10 bg-[url('/sympo_img3.jpg')] bg-cover bg-no-repeat bg-center bg-white px-5 py-6 md:py-8 lg:py-10 rounded-lg shadow-lg border border-cse-cyan outline-none text-center z-50"
       >
         <span
           className="absolute -right-3 -top-3.5 bg-cse-violet rounded-full p-0.5 hover:cursor-pointer"
@@ -261,6 +277,9 @@ const Home = () => {
         <h3 className="text-white text-shadow-dark-violet text-stroke-0-cse-violet font-semibold md:text-xl">
           Guaranteed Participant Certificate
         </h3>
+        <h3 className="text-white text-shadow-dark-violet text-stroke-0-cse-violet font-semibold md:text-xl">
+          Transportation Facilities Provided 
+        </h3>
         <button
           onClick={() => setIsModalOpen(false)}
           className="mt-5 text-white text-shadow px-5 py-1.5 rounded border border-cse-cyan font-semibold hover:bg-cse-violet transition-all hover:transition-all"
@@ -270,7 +289,7 @@ const Home = () => {
       </Modal>
 
       {/* College Name */}
-      <section className="bg-[url('/ellipse.png')] bg-cse-main bg-cover bg-no-repeat bg-center">
+      <section className="bg-[url('/sympo_img7.avif')] bg-cse-main bg-cover bg-no-repeat bg-center">
         <div className="space-y-6 md:space-y-12 px-1 text-center py-16 md:py-20 lg:py-20">
           <div className="space-y-3 md:space-y-5">
             <h3 className="text-white text-lg md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
@@ -280,7 +299,7 @@ const Home = () => {
               Computer Science & Engineering
             </h1>
             <h2 className="text-white text-lg md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
-              Government College of Engineering, Tiruneveli
+              Misrimal Navajee Munoth Jain Engineering College ,Thoraipakkam
             </h2>
           </div>
 
@@ -288,16 +307,20 @@ const Home = () => {
             <h1 className="text-white text-3xl md:text-3xl lg:text-4xl font-bold text-stroke-1-cse-cyan tracking-wide">
               Proudly Presents
             </h1>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wider text-shadow-violet">
-              SPARZO’24
-            </h1>
+            <div className="flex items-center justify-center space-x-4">
+              <img src="/logo-cognit.png" alt="Cognit 25 Logo" className="w-16 md:w-24 lg:w-32" />
+              <h1 className="text-6xl md:text-7xl lg:text-8xl jersey-10-regular tracking-wider text-shadow-red">
+                Cognit’25
+                </h1>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Events */}
-      <section className="bg-cse-main py-10 md:pt-10 md:pb-20 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-RubikDoodle text-white tracking-widest text-shadow-violet">
+      <section className="bg-[url('/23964.jpg')] bg-cover bg-no-repeat bg-center bg-cse-main py-10 md:pt-10 md:pb-20 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-RubikDoodle text-white tracking-widest text-shadow-red">
           HAPPENINGS
         </h1>
 
@@ -313,16 +336,13 @@ const Home = () => {
           >
             <button className="happenings-btns">Non-Technical Events</button>
           </Scroll>
-          <Scroll to="online-events" spy={true} smooth={true} duration={500}>
-            <button className="happenings-btns">Online Events</button>
-          </Scroll>
         </div>
       </section>
 
       {/* Event details */}
-      <section className="bg-[url('/events-bg.png')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
+      <section className="bg-[url('/sympo_img7.avif')] bg-cover bg-no-repeat bg-center flex justify-center min-h-screen">
         <div className="bg-cse-main bg-opacity-50 w-full py-16">
-          <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center text-shadow-violet tracking-wider">
+          <h1 className="text-white font-bold text-4xl md:text-5xl text-shadow text-center text-shadow-red tracking-wider">
             EVENTS
           </h1>
 
@@ -335,45 +355,78 @@ const Home = () => {
             </h1>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
-              <RouterLink to="/paper-presentation">
+
+
+              <RouterLink to="/Hackescape">
                 <EventsCard
-                  name={"Paper Presentation 📃"}
-                  img={"/paperpresentation.png"}
+                  name={"HackEscape🧙🏻‍♀️"}
+                  img={"/hackspace.jpg"}
                   details={
-                    "Showcase and present a topic related to computer science."
+                    "Hackscape is a cybersecurity race challenging participants to conquer five levels and reach the Grand Master Level."
                   }
                 />
               </RouterLink>
 
-              <RouterLink to="/code-hunt">
+              <RouterLink to="/Glitch-Hunt">
                 <EventsCard
-                  name={"Code Hunt 💻"}
-                  img={"/code-hunt.png"}
+                  name={"GLITCH-HUNT 🐞"}
+                  img={"/Glitch-hunt.jpg"}
                   details={
-                    " Code Hunt,an intense multi-round coding competition designed to test your programming"
+                    " Glitch-Hunt,an intense multi-round coding competition designed to test your programming"
                   }
                 />
               </RouterLink>
 
-              <RouterLink to="/webcraft">
+              <RouterLink to="/Techtonic-Trivia">
                 <EventsCard
-                  name={"WebCraft 🎨"}
-                  img={"/webcraft.png"}
+                  name={"TechtonicTrivia💻"}
+                  img={"/Techtonic Trivia-TECH Quiz.jpg"}
                   details={
-                    "Design an invitation, banner, logo, or thumbnail using Canva or similar tools."
+                    "A Tech Quiz is a competitive event that tests participants' knowledge across various technology domains"
                   }
                 />
               </RouterLink>
 
-              <RouterLink to={"sympai"}>
+              <RouterLink to={"/Paper-Presentation"}>
                 <EventsCard
-                  name={"SympAI 🤖"}
-                  img={"/sympai.png"}
+                  name={"PAPER PRESENTATION 📝"}
+                  img={"paper-presentation.jpeg"}
                   details={
-                    "Symp AI, a cutting edge technical challenge crafted for AI pioneers!"
+                    "NexGen Research Meet: Showcase innovations, share ideas, and explore future technologies with experts."
                   }
                 />
               </RouterLink>
+
+              <RouterLink to={"/CodeCanvas"}>
+                <EventsCard
+                  name={"Code-Canvas 👨‍💻"}
+                  img={"/FronEnd.jpeg"}
+                  details={
+                    "Frontend challenges participants to build responsive, interactive UIs using modern web technologies."
+                  }
+                />
+              </RouterLink>
+
+              <RouterLink to={"/Connectrix"}>
+                <EventsCard
+                  name={" CONNECTRIX 🌐"}
+                  img={"/Connectrix.jpeg"}
+                  details={
+                    "Participants analyze images from PowerPoint slides, discuss with their team, and determine the correct technical term."
+                  }
+                />
+              </RouterLink>
+
+              <RouterLink to={"/Debate-Floor"}>
+                <EventsCard
+                  name={" Debate Floor 🗣📢👥"}
+                  img={"/debateroom.jpg"}
+                  details={
+                    "SDebate Floor is a dynamic STEM debate event where students showcase communication, critical thinking, and persuasive skills."
+                  }
+                />
+              </RouterLink>
+
             </div>
           </div>
 
@@ -385,63 +438,72 @@ const Home = () => {
               NON-TECHNICAL EVENTS
             </h1>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <RouterLink to={"/adzap"}>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 md:gap-x-7 lg:gap-x-10 lg:gap-y-10">
+              <RouterLink to={"/TuneTopia"}>
                 <EventsCard
-                  name={"Adzap 🎭"}
-                  img={"/adzap.png"}
+                  name={"TuneTopia 🎭"}
+                  img={"/Tunetopia.jpg"}
                   details={
-                    "Create funny advertisements for imaginary products!"
+                    "A vibrant event celebrating music’s cultural essence—find the sound, feel unlimited!"
                   }
                 />
               </RouterLink>
 
-              <RouterLink to={"/clueclash"}>
+              <RouterLink to={"/FreeFire"}>
                 <EventsCard
-                  name={"Clue Clash 🧩"}
-                  img={"/clue-clash.png"}
+                  name={"FREE-FIRE🔫"}
+                  img={"/freefire.jpg"}
                   details={
-                    "Clue Clash competition designed to test participant's problem-solving, decoding, and quick-thinking skills"
+                    "Garena Free Fire is a fast-paced battle royale where players fight, scavenge, and survive—last one standing wins!"
                   }
                 />
               </RouterLink>
 
-              <RouterLink to={"/fusionary"}>
+              <RouterLink to={"/BrainTeaser"}>
                 <EventsCard
-                  name={"Fusionary 💡"}
-                  img={"/fusionary.png"}
+                  name={"BRAIN TEASER 🧩"}
+                  img={"/brain.jpg"}
                   details={
-                    "Connect the dots, decode the clues—where sharp minds and teamwork spark victory!"
-                  }
-                />
-              </RouterLink>
-            </div>
-          </div>
-
-          <div
-            id="online-events"
-            className="container px-7 md:px-12 lg:px-32 mt-14"
-          >
-            <h1 className="text-white text-center font-semibold text-3xl lg:text-4xl text-shadow">
-              ONLINE EVENTS
-            </h1>
-
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-y-12 md:gap-y-7 lg:gap-y-0 md:gap-x-7 lg:gap-x-10">
-              <RouterLink to={"/cinewhiz"}>
-                <EventsCard
-                  name={"Cinewhiz 🎬"}
-                  img={"/cinewhiz.png"}
-                  details={
-                    "Showcase your storytelling creativity and cinematic skills."
+                    "Brain Teaser is a fun puzzle game that tests logic, creativity, and problem-solving with tricky scenarios and riddles."
                   }
                 />
               </RouterLink>
 
-              <RouterLink to={"/shutterstories"}>
+              <RouterLink to={"/Box-Cricket"}>
                 <EventsCard
-                  name={"Shutter Stories 📸"}
-                  img={"/shutter-stories.png"}
-                  details={"Submit your best photograph based on a theme!"}
+                  name={"Box Cricket 🏏 "}
+                  img={"/boxcricket.jpg"}
+                  details={
+                    "Box Cricket is a fast-paced, enclosed-space version of cricket, offering a fun and accessible play experience."
+                  }
+                />
+              </RouterLink>
+
+              <RouterLink to={"/BattleRoyaleShowdown"}>
+                <EventsCard
+                  name={"BGMI GAME🎮🔫"}
+                  img={"/bgmi.jpg"}
+                  details={
+                    "Battle Royale Showdown – A high-stakes BGMI tournament testing skill, strategy, and teamwork!"
+                  }
+                />
+              </RouterLink>
+              <RouterLink to={"/Treasure-Hunt"}>
+                <EventsCard
+                  name={"TREASURE-HUNT📜💰"}
+                  img={"/Treasure.jpg"}
+                  details={
+                    "TREASURE HUNT – Let the Adventure Begin!Solve clues, race teams, and uncover the ultimate prize!"
+                  }
+                />
+              </RouterLink>
+              <RouterLink to={"/ConneXplosion"}>
+                <EventsCard
+                  name={"ConneXplosion 🔌"}
+                  img={"/connection.png"}
+                  details={
+                    "Guess the Word – Decode pictures to find the word or sentence! Team up (max 2) for this engaging symposium challenge."
+                  }
                 />
               </RouterLink>
             </div>

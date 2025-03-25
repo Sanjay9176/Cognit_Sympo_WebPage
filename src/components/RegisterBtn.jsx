@@ -2,7 +2,7 @@ const RegisterBtn = () => {
   return (
     <div className="">
       <a
-        href="https://forms.gle/2LhNuqZ98DwFEnDe7"
+        href="https://docs.google.com/forms/d/e/1FAIpQLScgulYk7h3hglD8-vO8EpvtcKXMeSVwvIvvpNHNZGRLksDFuA/viewform?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
